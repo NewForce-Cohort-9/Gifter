@@ -16,6 +16,7 @@ namespace Gifter
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddTransient<IPostRepository, PostRepository>();
+            builder.Services.AddTransient<IUserProfileRepository, UserProfileRepository>();
 
             var app = builder.Build();
 
