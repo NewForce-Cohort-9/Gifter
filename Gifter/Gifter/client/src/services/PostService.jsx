@@ -24,3 +24,6 @@ export const getSearchedPosts = (q) => {
     return fetch(`${baseUrl}/search?q=${q}`) 
       .then((res) => res.json())
   };
+  export const getPost = (id) => {
+    return fetch(`${baseUrl}/GetPostByIdWithComments/${id}`).then((res) => res.json());
+};

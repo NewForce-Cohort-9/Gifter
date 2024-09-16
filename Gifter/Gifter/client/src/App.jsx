@@ -1,16 +1,15 @@
 import "./index.css";
-import { PostList } from "./components/PostList";
 import { BrowserRouter } from 'react-router-dom'
-import { PostForm } from "./components/PostForm";
-import { Search } from "./components/Search";
+import ApplicationViews from "./components/ApplicationViews";
+import Header from "./components/Header";
 
 function App() {
  return (
 <>
 <BrowserRouter> 
-    <PostList />
-    <PostForm/>
-  </BrowserRouter>
+  <Header/>
+  <ApplicationViews/>
+</BrowserRouter>
 </>
 )
 }
