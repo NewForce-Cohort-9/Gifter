@@ -37,6 +37,8 @@ namespace Gifter.Controllers
         [HttpPost]
         public IActionResult Post(Post post)
         {
+            post.DateCreated = DateTime.Now;
+            post.UserProfileId = 1;
             _postRepository.Add(post);
             return CreatedAtAction("Get", new { id = post.Id }, post);
         }
